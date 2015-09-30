@@ -8,12 +8,17 @@ public class PopupController
 	private PopupDisplay myPopups;
 	private Thing myThing;
 	
+	/**
+	 * Instantiates a new instance of PopupDisplay
+	 */
 	public PopupController()
 	{
 		myPopups = new PopupDisplay();
 	}
 	
-	
+	/**
+	 * Runs on start. Collects input from the user with popups.
+	 */
 	public void start()
 	{
 		String name = myPopups.getAnswer("Type in your name");
@@ -59,8 +64,15 @@ public class PopupController
 		myPopups.displayResponse("You typed in " + weight);
 		
 		myThing = new Thing(name, age, weight);
+		
+		
 	}
 	
+	/**
+	 * Catches errors if user inputs a non integer when an integer is required.
+	 * @param input :User input from the popups
+	 * @return 
+	 */
 	private boolean isInteger(String input)
 	{
 		boolean isInteger = false;
@@ -78,6 +90,11 @@ public class PopupController
 		return isInteger;
 	}
 	
+	/**Catches errors if user inputs a non double value when a double is required.
+	 * 
+	 * @param input
+	 * @return
+	 */
 	private boolean isDouble(String input)
 	{
 		boolean isDouble = false;
