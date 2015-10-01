@@ -64,7 +64,7 @@ public class Thing
 	 */
 	public String toString()
 	{
-		String thingInfo = name + " is " + age + "and weighs " + weight + "pounds";
+		String thingInfo = name + " is " + age + " and weighs " + weight + " pounds";
 		return thingInfo;
 	}
 }

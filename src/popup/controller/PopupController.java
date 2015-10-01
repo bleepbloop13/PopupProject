@@ -65,6 +65,7 @@ public class PopupController
 		
 		myThing = new Thing(name, age, weight);
 		
+		myPopups.displayResponse(myThing.toString());
 		
 	}
 	
